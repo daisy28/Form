@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Big Shoulders Display', cursive;
+    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: url("bg-intro-desktop.png");
+    background-color: hsl(0, 100%, 74%);
+    height: 100vh;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+}
+
+.main{
+    display: grid;
+    grid-template-areas: 
+   ". b b"
+   "a b b"
+   ". b b";
+    gap: 50px;
+    width: 50%;
+    margin: auto;
+}
+
+.one{
+    grid-area: a;
+    justify-self: left;
+    /* margin-right: 50px; */
+}
+
+.two{
+    grid-area: b;
+    justify-self: left;
+    width: 100%;
+    /* margin-left: 30px; */
+}
+
+.heading{
+    font-weight: bold;
+    color: hsl(0, 0%, 95%);
+    margin-bottom: 30px;
+}
+
+.content{
+    color: hsl(0, 7%, 84%);
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.div{
+    height: 100%;
+    width: 100%;
+}
+
+.cta{
+    background-color: hsl(248, 32%, 49%);
+    box-shadow: 0 2px 9px hsl(179, 100%, 13%);
+    color: hsl(0, 7%, 84%);
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 7px;
+}
+
+.cta-form{
+    background-color: #fff;
+    box-shadow: 0 2px 9px hsl(179, 100%, 13%);
+    padding: 30px;
+    height: 90%;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.table{
+    height: 80%;
+    width: 100%;
+}
+
+.form input{
+   margin: 20px 0 12px 0;
+   height: 40px;
+   width: 100%;
+   padding: 15px;
+   border-radius: 6px;
+   border-top-color: rgb(230, 222, 222);
+}
+
+.submit{
+    background-color: hsl(154, 59%, 51%);
+    color: hsl(0, 11%, 93%);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 7px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.terms{
+    font-size: xx-small;
+    text-align: center;
+    color: hsl(0, 2%, 47%);
+}
+
+.text{
+    color: hsl(0, 100%, 74%);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1440px){
+    .main{
+        display: grid;
+        grid-template-areas: 
+       ". b b"
+       "a b b"
+       ". b b";
+        gap: 50px;
+        width: 50%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .main{
+        display: grid;
+        grid-template-areas: 
+       ". a ."
+       ". b .";
+        gap: 30px;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .one{
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .two{
+        width: 100%;
+        margin: auto;
+    }
+}
+/* - Mobile: 375px
+- Desktop: 1440px */
+
