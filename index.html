@@ -10,32 +10,34 @@
       href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>Form</title>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <main>
       <section class="main">
-        <section class="one">
+
+        <div class="one">
           <h2 class="heading">Learn to code by watching others</h2>
           <p class="content">
             See how experienced developers solve problems in real-time. Watching
             scripted tutorials is great, but understanding how developers think
             is invaluable.
           </p>
-        </section>
+        </div>
 
-        <section class="two">
-          <div class="div">
+        <div class="two">
             <div class="cta">
               <p><b>Try it free 7 days</b> then $20/mo. thereafter</p>
             </div>
+
             <div class="cta-form">
               <form action="get" class="form">
                 <table class="table">
                   <tr>
                     <td>
-                      <input
+                      <input data-error="First Name cannot be empty"
+                      class="error-input"
                         type="text"
                         name="first-name"
                         id="first-name"
@@ -46,7 +48,8 @@
                   </tr>
                   <tr>
                     <td>
-                      <input
+                      <input data-error="Last Name cannot be empty"
+                      class="error-input"
                         type="text"
                         name="last-name"
                         id="last-name"
@@ -57,7 +60,8 @@
                   </tr>
                   <tr>
                     <td>
-                      <input
+                      <input data-error="Looks like this is not an email"
+                      class="error-input"
                         type="email"
                         name="email"
                         required
@@ -67,7 +71,8 @@
                   </tr>
                   <tr>
                     <td>
-                      <input
+                      <input  data-error="Password cannot be empty"
+                      class="input"
                         type="password"
                         name="password"
                         id=""
@@ -75,14 +80,9 @@
                       />
                     </td>
                   </tr>
-
                   <tr>
                     <td>
-                      <input
-                        class="submit"
-                        type="submit"
-                        value="CLAIM YOUR FREE TRIAL"
-                      />
+                      <button class="submit" value="submit"><a href="#">CLAIM YOUR FREE TRIAL</a></button>
                     </td>
                   </tr>
                 </table>
@@ -93,7 +93,7 @@
               </form>
             </div>
           </div>
-        </section>
+          
       </section>
     </main>
   </body>

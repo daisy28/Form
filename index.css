@@ -5,16 +5,19 @@
     font-family: 'Big Shoulders Display', cursive;
     font-family: 'Lexend Deca', sans-serif;
     font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
 }
 
 body{
     background-image: url("bg-intro-desktop.png");
     background-color: hsl(0, 100%, 74%);
     height: 100vh;
+    width: 100%;
     display: flex;
-    place-items: center;
-    justify-content: center;
+    align-items: center;
 }
+
+/* -------Layout------- */
 
 .main{
     display: grid;
@@ -22,56 +25,49 @@ body{
    ". b b"
    "a b b"
    ". b b";
-    gap: 50px;
+    gap: 70px;
     width: 50%;
     margin: auto;
 }
 
 .one{
     grid-area: a;
-    justify-self: left;
-    /* margin-right: 50px; */
 }
 
 .two{
     grid-area: b;
-    justify-self: left;
-    width: 100%;
-    /* margin-left: 30px; */
 }
+
+/* -------Typography------- */
 
 .heading{
     font-weight: bold;
+    font-size: 1.9rem;
     color: hsl(0, 0%, 95%);
     margin-bottom: 30px;
 }
 
 .content{
     color: hsl(0, 7%, 84%);
-    font-size: 16px;
+    font-size: inherit;
     font-family: inherit;
-}
-
-.div{
-    height: 100%;
-    width: 100%;
 }
 
 .cta{
     background-color: hsl(248, 32%, 49%);
-    box-shadow: 0 2px 9px hsl(179, 100%, 13%);
+    box-shadow: 0 2px 9px hsla(179, 100%, 13%, 0.568);
     color: hsl(0, 7%, 84%);
     border-radius: 5px;
     text-align: center;
     margin-bottom: 15px;
-    padding: 7px;
+    padding: 0.5rem;
 }
 
 .cta-form{
     background-color: #fff;
-    box-shadow: 0 2px 9px hsl(179, 100%, 13%);
-    padding: 30px;
-    height: 90%;
+    box-shadow: 0 2px 9px hsla(180, 20%, 96%, 0.363);
+    padding: 1.8rem;
+    height: 85%;
     border-radius: 5px;
     width: 100%;
 }
@@ -82,27 +78,32 @@ body{
 }
 
 .form input{
-   margin: 20px 0 12px 0;
+   margin: 10px 0 15px 0;
    height: 40px;
    width: 100%;
-   padding: 15px;
+   padding: 1rem;
    border-radius: 6px;
-   border-top-color: rgb(230, 222, 222);
+   border: 2px solid hsl(0, 11%, 93%);
+}
+
+.submit > a{
+    text-decoration: none;
+    color: hsl(0, 11%, 93%);
 }
 
 .submit{
     background-color: hsl(154, 59%, 51%);
-    color: hsl(0, 11%, 93%);
+    width: 100%;
     border-radius: 5px;
-    margin-bottom: 10px;
-    padding: 7px;
+    margin-bottom: 8px;
+    padding: 0.5rem;
     border: none;
     font-weight: bold;
     cursor: pointer;
 }
 
 .terms{
-    font-size: xx-small;
+    font-size: .7rem;
     text-align: center;
     color: hsl(0, 2%, 47%);
 }
@@ -113,7 +114,18 @@ body{
     text-decoration: none;
 }
 
-@media screen and (max-width: 1440px){
+/* -------Responsiveness and Media Queries */
+
+@media(min-width: 1440px){
+    .body{
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+        width: 100%;
+    }
+}
+
+@media(min-width: 1440px){
     .main{
         display: grid;
         grid-template-areas: 
@@ -126,31 +138,40 @@ body{
     }
 }
 
-@media screen and (max-width: 375px){
+@media(max-width:375px){
+    body{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media(max-width: 375px){
     .main{
         display: grid;
         grid-template-areas: 
        ". a ."
+       ". . ."
        ". b .";
         gap: 30px;
         width: 100%;
-        margin: auto;
+        height: 100vh;
+        margin: 20px;
+        margin-bottom: 30px;
     }
 }
 
-@media screen and (max-width: 375px){
+@media(max-width: 375px){
     .one{
         width: 100%;
-        margin: auto;
     }
 }
 
-@media screen and (max-width: 375px){
+@media(max-width: 375px){
     .two{
         width: 100%;
-        margin: auto;
+    }
+
+    .submit{
+        padding: 0.2rem;
     }
 }
-/* - Mobile: 375px
-- Desktop: 1440px */
-
