@@ -15,16 +15,10 @@ body{
     background-color: hsl(0, 100%, 74%);
 }
 
-/* -------LAYOUT------- */
-
 .main{
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    margin: 1.1em auto;
-    padding: 1.5em;
-   
+    padding: 2rem;
 }
+
 
 /* -------TYPOGRAPHY------- */
 
@@ -75,6 +69,7 @@ body{
    padding: 1rem;
    border-radius: 6px;
    border: 2px solid hsl(0, 11%, 93%);
+   outline: none;
 }
 
 .submit > a{
@@ -107,18 +102,11 @@ body{
 
 /* -------RESPONSIVENESS AND MEDIA QUERIES------- */
 
-@media screen and (max-width: 375px) {
-    .main{
-        width: 100%;
-    }
-    
-}
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
     .main{
         display: flex;
-        flex-direction: row;
-        width: 60%;
+        width: 95%;
         height: 100vh;
         align-items: center;
         margin: auto;
@@ -128,12 +116,12 @@ body{
 
     .main > .one{
         padding: 1em;
-        width: 60%;
+        width: 40%;
     }
     
     .two{
-        margin-left: 1.4em;
         width: 60%;
+        max-width: 600px;
 
     }
 
